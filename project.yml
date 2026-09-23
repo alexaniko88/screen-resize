@@ -1,4 +1,4 @@
-name: Spectacle
+name: ScreenResize
 options:
   bundleIdPrefix: dev.tymoshenko
   deploymentTarget:
@@ -11,26 +11,26 @@ packages:
     from: 2.2.0
 
 targets:
-  Spectacle:
+  ScreenResize:
     type: application
     platform: macOS
     sources:
-      - path: Sources/Spectacle
+      - path: Sources/ScreenResize
     dependencies:
       - package: KeyboardShortcuts
     info:
-      path: Sources/Spectacle/Info.plist
+      path: Sources/ScreenResize/Info.plist
       properties:
         LSUIElement: true
-        CFBundleDisplayName: Spectacle
-        CFBundleName: Spectacle
+        CFBundleDisplayName: Screen Resize
+        CFBundleName: Screen Resize
         CFBundleShortVersionString: "1.0"
         CFBundleVersion: "1"
         NSHumanReadableCopyright: "Copyright © 2026. All rights reserved."
         LSMinimumSystemVersion: "13.0"
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: dev.tymoshenko.spectacle
+        PRODUCT_BUNDLE_IDENTIFIER: dev.tymoshenko.screenresize
         MARKETING_VERSION: "1.0"
         CURRENT_PROJECT_VERSION: "1"
         ENABLE_HARDENED_RUNTIME: true

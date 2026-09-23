@@ -1,8 +1,8 @@
-# Spectacle (Swift Clone)
+# Screen Resize (Swift Clone)
 
 A modern, fast, and lightweight clone of the classic **Spectacle** window manager for macOS, rewritten completely in Swift.
 
-![Spectacle](Sources/Spectacle/Resources/Assets.xcassets/AppIcon.appiconset/icon_128x128.png)
+![Screen Resize](Sources/ScreenResize/Resources/Assets.xcassets/AppIcon.appiconset/icon_128x128.png)
 
 ## Highlights
 
@@ -58,15 +58,15 @@ A modern, fast, and lightweight clone of the classic **Spectacle** window manage
 
 2. Open the project in Xcode:
    ```bash
-   open Spectacle.xcodeproj
+   open ScreenResize.xcodeproj
    ```
    Or build from the terminal:
    ```bash
-   xcodebuild -scheme Spectacle -configuration Release build
+   xcodebuild -scheme ScreenResize -configuration Release build
    ```
 
 3. **Grant Accessibility Permission**:
-   On first launch, macOS will ask for Accessibility permissions. Enable Spectacle under:
+   On first launch, macOS will ask for Accessibility permissions. Enable Screen Resize under:
    **System Settings > Privacy & Security > Accessibility**
 
 ---

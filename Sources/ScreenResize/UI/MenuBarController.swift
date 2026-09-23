@@ -18,7 +18,7 @@ final class MenuBarController: NSObject {
                 image.isTemplate = true
                 button.image = image
             } else {
-                let fallback = NSImage(systemSymbolName: "arrow.left.and.right", accessibilityDescription: "Spectacle")
+                let fallback = NSImage(systemSymbolName: "arrow.left.and.right", accessibilityDescription: "Screen Resize")
                 fallback?.isTemplate = true
                 button.image = fallback
             }
@@ -69,7 +69,7 @@ final class MenuBarController: NSObject {
 
         menu.addItem(NSMenuItem.separator())
 
-        let quitItem = NSMenuItem(title: "Quit Spectacle", action: #selector(quitApp), keyEquivalent: "q")
+        let quitItem = NSMenuItem(title: "Quit Screen Resize", action: #selector(quitApp), keyEquivalent: "q")
         quitItem.target = self
         menu.addItem(quitItem)
 
@@ -96,7 +96,7 @@ final class MenuBarController: NSObject {
         if settingsWindow == nil {
             let hostingController = NSHostingController(rootView: SettingsView())
             let window = NSWindow(contentViewController: hostingController)
-            window.title = "Spectacle Settings"
+            window.title = "Screen Resize Settings"
             window.styleMask = [.titled, .closable, .miniaturizable]
             window.center()
             window.isReleasedWhenClosed = false

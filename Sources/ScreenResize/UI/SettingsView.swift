@@ -109,7 +109,7 @@ struct SettingsView: View {
                         }
                     }
 
-                    Text("Spectacle requires Accessibility permissions to resize and arrange windows on your desktop.")
+                    Text("Screen Resize requires Accessibility permissions to resize and arrange windows on your desktop.")
                         .font(.caption)
                         .foregroundColor(.secondary)
                 }
@@ -118,7 +118,7 @@ struct SettingsView: View {
 
             // Launch at login card
             GroupBox(label: Label("Startup", systemImage: "gearshape.fill")) {
-                Toggle("Launch Spectacle at login", isOn: $launchAtLogin)
+                Toggle("Launch Screen Resize at login", isOn: $launchAtLogin)
                     .onChange(of: launchAtLogin) { newValue in
                         toggleLaunchAtLogin(newValue)
                     }
@@ -149,7 +149,7 @@ struct SettingsView: View {
                     .foregroundColor(.accentColor)
             }
 
-            Text("Spectacle")
+            Text("Screen Resize")
                 .font(.title)
                 .bold()
 
