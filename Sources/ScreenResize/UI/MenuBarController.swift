@@ -15,6 +15,7 @@ final class MenuBarController: NSObject {
 
         if let button = statusItem?.button {
             if let image = NSImage(named: "MenuBarIcon") {
+                image.size = NSSize(width: 24, height: 18)
                 image.isTemplate = true
                 button.image = image
             } else {
