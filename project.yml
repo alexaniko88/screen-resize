@@ -33,7 +33,12 @@ targets:
         PRODUCT_BUNDLE_IDENTIFIER: dev.tymoshenko.screenresize
         MARKETING_VERSION: "1.0"
         CURRENT_PROJECT_VERSION: "1"
-        ENABLE_HARDENED_RUNTIME: true
-        CODE_SIGN_STYLE: Automatic
+        # Local-only app: sign with a stable self-signed identity so the
+        # Accessibility permission survives rebuilds (ad-hoc signing changes
+        # the code hash on every build and macOS drops the grant).
+        ENABLE_HARDENED_RUNTIME: false
+        CODE_SIGN_STYLE: Manual
+        CODE_SIGN_IDENTITY: "ScreenResize Local"
+        DEVELOPMENT_TEAM: ""
         SWIFT_VERSION: "5.0"
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon

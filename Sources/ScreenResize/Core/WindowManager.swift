@@ -12,6 +12,7 @@ final class WindowManager {
     func perform(_ action: WindowAction) {
         guard AccessibilityManager.shared.isGranted else {
             AccessibilityManager.shared.checkOrPrompt()
+            NSSound.beep()
             return
         }
 
