@@ -1,0 +1,39 @@
+name: Spectacle
+options:
+  bundleIdPrefix: dev.tymoshenko
+  deploymentTarget:
+    macOS: "13.0"
+  createIntermediateGroups: true
+
+packages:
+  KeyboardShortcuts:
+    url: https://github.com/sindresorhus/KeyboardShortcuts
+    from: 2.2.0
+
+targets:
+  Spectacle:
+    type: application
+    platform: macOS
+    sources:
+      - path: Sources/Spectacle
+    dependencies:
+      - package: KeyboardShortcuts
+    info:
+      path: Sources/Spectacle/Info.plist
+      properties:
+        LSUIElement: true
+        CFBundleDisplayName: Spectacle
+        CFBundleName: Spectacle
+        CFBundleShortVersionString: "1.0"
+        CFBundleVersion: "1"
+        NSHumanReadableCopyright: "Copyright © 2026. All rights reserved."
+        LSMinimumSystemVersion: "13.0"
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: dev.tymoshenko.spectacle
+        MARKETING_VERSION: "1.0"
+        CURRENT_PROJECT_VERSION: "1"
+        ENABLE_HARDENED_RUNTIME: true
+        CODE_SIGN_STYLE: Automatic
+        SWIFT_VERSION: "5.0"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
